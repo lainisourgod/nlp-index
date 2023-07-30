@@ -10,3 +10,5 @@ stages:
     deps:
     - data/prepared/messages.json
     - nlp_index/index.py
+    outs:
+    - data/prepared/index
