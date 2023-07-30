@@ -5,10 +5,21 @@ stages:
     deps:
     - path: nlp_index/parse.py
       hash: md5
-      md5: c2b79b8157855ef1c869e16fd37beae9
-      size: 1517
+      md5: 45109ae93791747d2358fb27e478d318
+      size: 1525
     outs:
+    - path: data/prepared/messages.json
+      hash: md5
+      md5: 3e8ce597f10fc116bbb371d2b051204c
+      size: 13336136
+  index:
+    cmd: python nlp_index/index.py
+    deps:
     - path: data/prepared/messages.json
       hash: md5
       md5: b4e0661d6ec97059c51ef68806fd2d9a
       size: 13336136
+    - path: nlp_index/index.py
+      hash: md5
+      md5: 541338d1af06d44efc912142c75b1ea5
+      size: 834

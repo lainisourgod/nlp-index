@@ -5,3 +5,8 @@ stages:
     - nlp_index/parse.py
     outs:
     - data/prepared/messages.json
+  index:
+    cmd: python nlp_index/index.py
+    deps:
+    - data/prepared/messages.json
+    - nlp_index/index.py

@@ -34,7 +34,7 @@ def parse_one_file(data: str) -> list[dict[str, str]]:
 
 all_messages = []
 data_dir = Path(__file__).parent.parent / "data" / "raw" / "chat_export"
-files = list(data_dir.iterdir())
+files = sorted(list(data_dir.iterdir()))
 
 
 with Progress() as progress:
