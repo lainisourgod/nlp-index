@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  parse:
+    cmd: python nlp_index/parse.py
+    deps:
+    - path: nlp_index/parse.py
+      hash: md5
+      md5: c2b79b8157855ef1c869e16fd37beae9
+      size: 1517
+    outs:
+    - path: data/prepared/messages.json
+      hash: md5
+      md5: b4e0661d6ec97059c51ef68806fd2d9a
+      size: 13336136

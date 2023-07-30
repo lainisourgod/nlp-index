@@ -1,0 +1,7 @@
+stages:
+  parse:
+    cmd: python nlp_index/parse.py
+    deps:
+    - nlp_index/parse.py
+    outs:
+    - data/prepared/messages.json
