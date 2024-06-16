@@ -236,6 +236,8 @@ llama-parse==0.4.4
 llamaindex-py-client==0.1.19
     # via llama-index-core
     # via llama-index-indices-managed-llama-cloud
+loguru==0.7.2
+    # via nlp-index
 markdown-it-py==3.0.0
     # via rich
 marshmallow==3.21.3
@@ -410,6 +412,7 @@ tqdm==4.66.4
     # via scmrepo
 typer==0.12.3
     # via gto
+    # via nlp-index
 typing-extensions==4.12.2
     # via asyncssh
     # via llama-index-core

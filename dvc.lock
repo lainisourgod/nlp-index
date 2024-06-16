@@ -1,17 +1,21 @@
 schema: '2.0'
 stages:
   parse:
-    cmd: python nlp_index/parse.py
+    cmd: python src/nlp_index/data/parse.py
     deps:
-    - path: nlp_index/parse.py
+    - path: data/raw/chat_export.json
       hash: md5
-      md5: 45109ae93791747d2358fb27e478d318
-      size: 1525
+      md5: 8cc2ff50bd39b6e655a96e43a1d450e5
+      size: 60853742
+    - path: src/nlp_index/data/parse.py
+      hash: md5
+      md5: 9828607f739a00e6693da69faf3e56c2
+      size: 2218
     outs:
-    - path: data/prepared/messages.json
+    - path: data/prepared/messages.csv
       hash: md5
-      md5: 3e8ce597f10fc116bbb371d2b051204c
-      size: 13336136
+      md5: 94e2ef642e36076feaa9827bd287cc74
+      size: 20774437
   index:
     cmd: python nlp_index/index.py
     deps:

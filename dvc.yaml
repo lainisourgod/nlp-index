@@ -1,14 +1,15 @@
 stages:
   parse:
-    cmd: python nlp_index/parse.py
+    cmd: python src/nlp_index/data/parse.py
     deps:
-    - nlp_index/parse.py
+      - src/nlp_index/data/parse.py
+      - data/raw/chat_export.json
     outs:
-    - data/prepared/messages.json
+      - data/prepared/messages.csv
   index:
-    cmd: python nlp_index/index.py
+    cmd: python src/nlp_index/index.py
     deps:
-    - data/prepared/messages.json
-    - nlp_index/index.py
+      - data/prepared/messages.csv
+      - src/nlp_index/index.py
     outs:
-    - data/prepared/index
+      - data/prepared/index

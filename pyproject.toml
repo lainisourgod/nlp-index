@@ -9,20 +9,26 @@ dependencies = [
     "beautifulsoup4>=4.12.3",
     "dvc>=3.51.2",
     "rich>=13.7.1",
+    "typer>=0.12.3",
+    "loguru>=0.7.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.10"
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = ["ipykernel>=6.29.4"]
+
+
+[tool.ruff]
+line-length = 120
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/nlp_index"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

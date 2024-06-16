@@ -1,5 +1,10 @@
-from rich.console import Console
-from rich.traceback import install
+from loguru import logger
+from rich.logging import RichHandler
 
-log = Console().log
-install()
+
+log_format = "{message}"
+log_level = "DEBUG"
+
+logger.configure(
+    handlers=[{"sink": RichHandler(rich_tracebacks=True, markup=True), "format": log_format, "level": log_level}]
+)
